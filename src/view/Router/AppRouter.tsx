@@ -34,6 +34,7 @@ const AppRouter: React.FC = () => {
           {publicRoutes.map(({ path, Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
+          <Route path={"*"} element={<Layout />} />
         </Route>
       </Routes>
     </BrowserRouter>

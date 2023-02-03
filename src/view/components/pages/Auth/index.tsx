@@ -30,15 +30,24 @@ const Auth: React.FC = () => {
     }
   }, [error, user]);
 
-  // React.useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     navigate(HOME_ROUTE);
-  //   }
-  // }, []);
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate(HOME_ROUTE);
+    }
+  }, []);
 
   return (
     <div className={styles.auth}>
       <div className={styles.wrapper}>
+        <p
+          style={{
+            color: "white",
+            paddingBottom: "100px",
+            textAlign: "center",
+          }}
+        >
+          Нажмите на клавиатуре F11 для комфортного использования сайта
+        </p>
         <div className={styles.userAvatar}>
           <svg
             height="80px"
