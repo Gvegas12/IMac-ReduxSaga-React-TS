@@ -1,0 +1,26 @@
+@import "../../../assets/styles/variables";
+
+.browser {
+  @include folderStyles;
+
+  .header {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .url {
+    margin-top: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 5px 10px;
+    opacity: 0.7;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  }
+  .content {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

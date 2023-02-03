@@ -1,0 +1,42 @@
+.footer {
+  position: absolute;
+  width: 70%;
+  border-radius: 15px 15px 0 0;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(120%);
+
+  .settingsIcon {
+    margin-right: 11px;
+    width: 30px;
+    height: 30px;
+    background: url("./img/apple-settings.svg") no-repeat transparent
+      center/contain;
+  }
+
+  .icon {
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .active {
+    transform: scale(1.4);
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+  :global {
+    .ME-icon-svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

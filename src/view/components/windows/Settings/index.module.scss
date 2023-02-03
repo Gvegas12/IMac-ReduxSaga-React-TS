@@ -1,0 +1,24 @@
+@import "../../../assets/styles/variables";
+
+.folder {
+  @include folderStyles;
+  width: 50%;
+  .wrapper {
+    overflow: hidden;
+  }
+
+  .contentItem {
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-align: start;
+
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

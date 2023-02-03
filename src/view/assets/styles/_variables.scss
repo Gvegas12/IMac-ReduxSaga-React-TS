@@ -1,0 +1,70 @@
+$container--width: 98%;
+
+@mixin folderBtnStyles($bg) {
+  cursor: pointer;
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 100%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  background-color: $bg;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin folderStyles {
+  $mainBorderRadius: 6px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500px;
+  width: 80%;
+  margin: auto;
+  border-radius: $mainBorderRadius 0 $mainBorderRadius $mainBorderRadius;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    border-radius: $mainBorderRadius $mainBorderRadius 0 0;
+    &__btnWrapper {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+
+      .onCloseBtn {
+        @include folderBtnStyles(#fe5c63);
+        margin-right: 5px;
+      }
+    }
+  }
+  .wrapper {
+    flex-grow: 2;
+    width: 100%;
+    padding: 2%;
+    border-radius: 0 0 0 $mainBorderRadius;
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-dark--body-bg-color) rgba(255, 255, 255, 0.6); /* плашка скролла и дорожка */
+    &::-webkit-scrollbar {
+      width: 12px; /* ширина scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.6); /* цвет дорожки */
+      border-radius: 0 $mainBorderRadius $mainBorderRadius 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--theme-dark--body-bg-color); /* цвет плашки */
+      border-radius: 0 $mainBorderRadius $mainBorderRadius 0; /* закругления плашки */
+      border: 3px solid rgba(255, 255, 255, 0.6); /* padding вокруг плашки */
+    }
+  }
+}

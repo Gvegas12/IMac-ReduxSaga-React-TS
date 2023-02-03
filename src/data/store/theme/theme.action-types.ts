@@ -1,0 +1,2 @@
+export const THEME_LIGHT_MODE = "THEME_LIGHT_MODE";
+export const THEME_DARK_MODE = "THEME_DARK_MODE";

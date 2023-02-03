@@ -1,0 +1,32 @@
+.user {
+  position: relative;
+  padding: 10px;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  &Data {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px) saturate(120%);
+    &Item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &Posts {
+      margin-top: 10px;
+
+      &Item {
+        background: rgba(162, 162, 162, 0.67);
+        &:not(:last-child) {
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

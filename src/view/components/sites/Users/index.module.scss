@@ -1,0 +1,38 @@
+.users {
+  position: relative;
+
+  .btnWrapper {
+    margin: 10px 0;
+    .btn {
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
+  }
+  .wrapper {
+    padding: 10px;
+    .title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .userList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px) saturate(120%);
+    }
+    .userItem {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: white;
+      span {
+        font-size: 0.9rem;
+        color: black;
+      }
+    }
+  }
+}
