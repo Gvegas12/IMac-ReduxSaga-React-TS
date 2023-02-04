@@ -17,7 +17,6 @@ import Settings from "../components/windows/Settings";
 import UserSite from "../components/sites/User";
 
 const AppRouter: React.FC = () => {
-  // f11 нажми для fullscreen
   return (
     <BrowserRouter>
       <Routes>

@@ -23,6 +23,9 @@
     left: 0;
     margin: auto;
     width: 20%;
+    @media (max-width: 600px) {
+      width: 60%;
+    }
     height: max-content;
     animation: firstRender 1s ease;
   }

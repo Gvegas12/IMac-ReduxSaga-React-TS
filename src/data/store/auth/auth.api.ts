@@ -37,7 +37,7 @@ export const fetchLogin = ({
     }
     if (!checkEmail) {
       throw new Error(`Не правильный email, 
-         должен быть в формате email@domain.com
+         должен быть в формате mock@root.com
       `);
     }
     if (!checkPassword) {

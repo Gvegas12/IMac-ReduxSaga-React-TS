@@ -15,6 +15,12 @@ const Settings: React.FC = () => {
   const { theme } = useTypedSelector((state) => state.theme);
   const themeStyle = getThemeStyles(theme);
 
+  React.useEffect(() => {
+    if (!localStorage.getItem(`token`)) {
+      navigate(AUTH_ROUTE);
+    }
+  }, []);
+
   return (
     <div className={styles.folder}>
       <div

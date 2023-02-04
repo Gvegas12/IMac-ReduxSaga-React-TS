@@ -15,7 +15,7 @@ const UsersSite: React.FC = () => {
   const dispatch = useDispatch();
   const { users } = useTypedSelector((state) => state.users);
   const [usersState, setUsersState] = React.useState<IUsersDataResponse[]>();
-  const [toggleSort, setToggleSort] = React.useState<boolean>(false);
+  const [toggleSort, setToggleSort] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     dispatch({ type: FETCH_USERS_REQUEST });

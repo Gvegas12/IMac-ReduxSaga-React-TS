@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
 import { fetchUserPostsRequestAction } from "../../../../data/store/users/users.actions";
 import {

@@ -25,7 +25,7 @@ const PostsSite: React.FC = () => {
   const [postsTotalData, setPostsTotalData] = React.useState<IPostTotalData[]>(
     [] as IPostTotalData[]
   );
-  const [toggleSort, setToggleSort] = React.useState<boolean>(false);
+  const [toggleSort, setToggleSort] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     dispatch(fetchUserPostsRequestAction({ userId: 1 }));

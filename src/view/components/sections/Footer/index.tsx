@@ -10,6 +10,11 @@ import styles from "./index.module.scss";
 
 const Footer: React.FC = () => {
   const location = useLocation();
+
+  if (!localStorage.getItem(`token`)) {
+    return null;
+  }
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>

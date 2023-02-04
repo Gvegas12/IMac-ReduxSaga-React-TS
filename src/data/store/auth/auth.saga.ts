@@ -14,6 +14,15 @@ import {
 } from "./auth.types";
 import { LoginFailedAction, LoginSuccessAction } from "./login/login.actions";
 
+/**
+ * * Принимает обьект со свойствами:
+ * @param {string} email - email пользователя
+ * @param {string} password - password пользователя
+ * * При удачном логине:
+ * Записывает токен в LS
+ * * При ошибке:
+ * Вызывает action с типом LOGIN_FAILED
+ */
 function* loginWorker({ email, password }: ILoginRequestPayload) {
   try {
     const response: IUserResponse = yield call(fetchLogin, {
@@ -29,6 +38,14 @@ function* loginWorker({ email, password }: ILoginRequestPayload) {
   }
 }
 
+/**
+ * Прослушивает action с типом LOGIN_REQUEST, как только он произойдет, 
+ * то вызывает сагу воркер loginWorker, которая принимает:
+ * @param {string} email - email пользователя
+ * @param {string} password - password пользователя
+ * * При ошибке:
+ * Вызывает action с типом LOGIN_FAILED
+ */
 export function* loginWatcher() {
   while (true) {
     const { payload }: ILoginRequestAction = yield take(LOGIN_REQUEST);

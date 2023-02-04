@@ -1,10 +1,11 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { HOME_ROUTE } from "../../../../data/router/utils/authRoutes.utils";
 import { getThemeStyles } from "../../../utils/themeStyles";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 
 import styles from "./index.module.scss";
+import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
 
 interface IBrowserProps {
   name?: string;
@@ -18,10 +19,15 @@ const Browser: React.FC<IBrowserProps> = ({ name }) => {
   );
 
   React.useEffect(() => {
+    if (!localStorage.getItem(`token`)) {
+      navigate(AUTH_ROUTE);
+    }
+  }, []);
+  React.useEffect(() => {
     setUrl(`${location.origin}${locationRouter.pathname}`);
   }, [locationRouter]);
 
-  const onChangeUrl = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChangeUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUrl(e.target.value);
   };
 
