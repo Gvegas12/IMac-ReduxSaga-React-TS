@@ -47,6 +47,15 @@ const Auth: React.FC = () => {
           }}
         >
           Нажмите на клавиатуре F11 для комфортного использования сайта
+          <br />
+          <br />
+          email: mock1@root.com
+          <br />
+          email: mock2@root.com
+          <br />
+          email: mock3@root.com
+          <br />
+          password: root
         </p>
         <div className={styles.userAvatar}>
           <svg
