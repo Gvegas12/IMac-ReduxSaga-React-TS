@@ -9,12 +9,12 @@ import {
   USERS_ROUTE,
   USER_ROUTE,
 } from "../../data/router/utils/authRoutes.utils";
-import Browser from "../components/windows/Browser";
-import PostsSite from "../components/sites/Posts";
-import UsersSite from "../components/sites/Users";
+import PostsSite from "../components/entities/Posts";
+import UserSite from "../components/entities/User";
+import UsersSite from "../components/entities/Users";
+import Browser from "../components/features/Browser";
+import Settings from "../components/features/Settings";
 import Layout from "./Layout";
-import Settings from "../components/windows/Settings";
-import UserSite from "../components/sites/User";
 
 const AppRouter: React.FC = () => {
   return (

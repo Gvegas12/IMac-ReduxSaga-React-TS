@@ -1,8 +1,8 @@
 import React from "react";
+import { Link, Pathname } from "react-router-dom";
 import clsx from "clsx";
 
 import styles from "./index.module.scss";
-import { Link, Pathname } from "react-router-dom";
 
 interface UIFileIconProps {
   name?: string;

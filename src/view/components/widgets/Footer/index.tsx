@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   if (!localStorage.getItem(`token`)) {
     return null;
   }
-  
+
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>

@@ -1,10 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  BROWSER_ROUTE,
-  USERS_ROUTE,
-} from "../../../../data/router/utils/authRoutes.utils";
+import { BROWSER_ROUTE, USERS_ROUTE } from "../../../../data/router/utils/authRoutes.utils";
 import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
 import { IUsersDataResponse } from "../../../../data/store/users/users.types";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";

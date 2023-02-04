@@ -1,4 +1,4 @@
-import { Themes } from "../../data/store/theme/theme.types";
+import { Themes } from "../../../data/store/theme/theme.types";
 
 export const getThemeStyles = (theme: Themes) => ({
   header: {

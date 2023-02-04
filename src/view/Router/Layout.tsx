@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/sections/Header";
+import Header from "../components/widgets/Header";
 import { Outlet } from "react-router-dom";
 import { Themes } from "../../data/store/theme/theme.types";
 import { useTypedSelector } from "../hooks/useTypedSelector";

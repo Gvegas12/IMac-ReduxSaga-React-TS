@@ -1,19 +1,15 @@
 import React from "react";
 import UI from "../../UI";
+import Footer from "../../widgets/Footer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
-import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
+import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
+import { BROWSER_ROUTE, POSTS_ROUTE, USERS_ROUTE } from "../../../../data/router/utils/authRoutes.utils";
+import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
 import { fetchUserPostsRequestAction } from "../../../../data/store/users/users.actions";
-import {
-  BROWSER_ROUTE,
-  POSTS_ROUTE,
-  USERS_ROUTE,
-} from "../../../../data/router/utils/authRoutes.utils";
 
 import styles from "./index.module.scss";
-import Footer from "../../sections/Footer";
 
 const Desktop: React.FC = () => {
   const dispatch = useDispatch();

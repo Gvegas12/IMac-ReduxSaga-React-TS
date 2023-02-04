@@ -1,17 +1,19 @@
 import React from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { HOME_ROUTE } from "../../../../data/router/utils/authRoutes.utils";
-import { getThemeStyles } from "../../../utils/themeStyles";
+import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
+import { getThemeStyles } from "../../utils/themeStyles";
 
 import styles from "./index.module.scss";
-import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
 
 interface IBrowserProps {
   name?: string;
 }
 
 const Browser: React.FC<IBrowserProps> = ({ name }) => {
+  const { theme } = useTypedSelector((state) => state.theme);
+  const themeStyle = getThemeStyles(theme);
   const navigate = useNavigate();
   const locationRouter = useLocation();
   const [url, setUrl] = React.useState<string>(
@@ -31,8 +33,6 @@ const Browser: React.FC<IBrowserProps> = ({ name }) => {
     setUrl(e.target.value);
   };
 
-  const { theme } = useTypedSelector((state) => state.theme);
-  const themeStyle = getThemeStyles(theme);
 
   return (
     <div className={styles.browser}>

@@ -1,12 +1,12 @@
 import React from "react";
 import clsx from "clsx";
-import { Themes } from "../../../../data/store/theme/theme.types";
 import { useDispatch } from "react-redux";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 import {
   SetDarkThemeAction,
   SetLightThemeAction,
 } from "../../../../data/store/theme/theme.actions";
+import { Themes } from "../../../../data/store/theme/theme.types";
 
 import styles from "./index.module.scss";
 

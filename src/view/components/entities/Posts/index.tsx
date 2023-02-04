@@ -1,19 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
-import { fetchUserPostsRequestAction } from "../../../../data/store/users/users.actions";
-import { useTypedSelector } from "../../../hooks/useTypedSelector";
-import {
-  IUserPostsDataResponse,
-  IUsersDataResponse,
-} from "../../../../data/store/users/users.types";
-
-import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 import {
   BROWSER_ROUTE,
   USERS_ROUTE,
 } from "../../../../data/router/utils/authRoutes.utils";
+import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
+import { fetchUserPostsRequestAction } from "../../../../data/store/users/users.actions";
+import {
+  IUserPostsDataResponse,
+  IUsersDataResponse,
+} from "../../../../data/store/users/users.types";
+import { useTypedSelector } from "../../../hooks/useTypedSelector";
+
+import styles from "./index.module.scss";
 
 interface IPostTotalData extends IUserPostsDataResponse {
   user: IUsersDataResponse | undefined;

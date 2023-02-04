@@ -5,7 +5,7 @@ import { HOME_ROUTE } from "../../../../data/router/utils/authRoutes.utils";
 import { AUTH_ROUTE } from "../../../../data/router/utils/publicRoutes.utils";
 import { ACTION_LOGOUT } from "../../../../data/store/auth/auth.action-types";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
-import { getThemeStyles } from "../../../utils/themeStyles";
+import { getThemeStyles } from "../../utils/themeStyles";
 
 import styles from "./index.module.scss";
 

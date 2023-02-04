@@ -3,10 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { FETCH_USERS_REQUEST } from "../../../../data/store/users/users.action-types";
 import { fetchUserPostsRequestAction } from "../../../../data/store/users/users.actions";
-import {
-  IUserPostsDataResponse,
-  IUsersDataResponse,
-} from "../../../../data/store/users/users.types";
+import { IUserPostsDataResponse, IUsersDataResponse } from "../../../../data/store/users/users.types";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 
 import styles from "./index.module.scss";
